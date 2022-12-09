@@ -8,12 +8,12 @@ RSpec.describe Comment, type: :model do
     expect(comment).to_not be_valid
   end
 
-    it 'should have a post id' do
+  it 'should have a post id' do
     comment.post_id = nil
     expect(comment).to_not be_valid
-    end
+  end
 
-    it 'should have a same text' do
+  it 'should have a same text' do
     expect(comment.text).to eq('comment')
-    end
+  end
 end
