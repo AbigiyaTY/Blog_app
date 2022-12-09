@@ -3,6 +3,10 @@ class Post < ApplicationRecord
   has_many :comments, foreign_key: :post_id
   has_many :likes, foreign_key: :post_id
 
+  after_save :update_post_counter
+
+  private
+
   def update_post_counter
     post.increment!(:posts_counter)
   end
