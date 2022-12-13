@@ -3,7 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
 
-gem 'rspec-rails', '~> 4.0.0.beta2'
+# gem 'rspec-rails', '~> 4.0.0.beta2'
+gem 'rspec-rails', '~> 6.0.0'
 
 gem 'rails', '~> 7.0.4'
 
