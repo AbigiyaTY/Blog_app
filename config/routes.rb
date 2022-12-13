@@ -16,4 +16,10 @@ Rails.application.routes.draw do
   get "/users/:id/posts/:id/comments/new", to: "comments#new"
   get "/users/:id/posts/:id/comments/:id", to: "comments#show"
   get "/users/:id/posts/:id/comments/:id/edit", to: "comments#edit"
+  get "/users/:id/posts/:id/likes", to: "posts#likes"
+  get "/users/:id/posts/:id/likes/new", to: "likes#new"
+  get "/users/:id/posts/:id/likes/:id", to: "likes#show"
+  get "/users/:id/posts/:id/likes/:id/edit", to: "likes#edit"
+  get "/users/:id/posts/:id/likes/index", to: "likes#index"
+
 end
