@@ -21,7 +21,6 @@
     - [Install](#install)
     - [Usage](#usage)
   - [Author](#author)
-  - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [📝 License ](#-license-)
@@ -94,17 +93,6 @@ To run the project, execute the following command:
 * GitHub: [@githubhandle](https://github.com/AbigiyaTY)
 * Twitter: [@twitterhandle](https://twitter.com/AbigiyaTY)
 * LinkedIn: [@LinkedIn](https://www.linkedin.com/in/AbigiyaTY)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-> Features of this project.
-
-- [ ] **User Authentication**
-- [ ] **CRUD Operations**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
