@@ -37,8 +37,12 @@
 2. Use Ruby Gems as a software packages system.
 3. Understand what ORM is.
 4. Use database migration files to maintain database schema.
+5. Write tests for models, controllers.
 5. Set up associations between models.
 6. Write SQL queries with Active Record
+7. Use preprocessed HTML file with embedded Ruby code.
+8. Use layouts and templates for shared content.
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
