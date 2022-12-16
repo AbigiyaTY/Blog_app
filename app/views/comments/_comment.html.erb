@@ -1,16 +1,6 @@
 <div id="<%= dom_id comment %>">
   <p>
-    <strong>Author:</strong>
-    <%= comment.author_id %>
-  </p>
-
-  <p>
-    <strong>Post:</strong>
-    <%= comment.post_id %>
-  </p>
-
-  <p>
-    <strong>Text:</strong>
+    <strong><%= @user.name %></strong>
     <%= comment.text %>
   </p>
 

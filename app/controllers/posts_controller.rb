@@ -2,7 +2,10 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
 
   def index
+    @user = User.find_by(id: params[:user_id])
+    @posts = @user.posts
     @posts = Post.all
+    @comments = @user.comments
   end
 
   def show; end
