@@ -1,14 +1,30 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Posts</h1>
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
+<div class = "container my-5 userBG">
+    <div class = "row">
+      <div class="col-12 row">
+        <img src= "<%= @user.photo %>" class="col-6 py-2 userImage">
+        <div class = "col-6 row py-5">
+          <h3 class = "col-12"><%= @user.name %></h3>
+          <h4 class = "col-12">Number of posts:  <%= @user.posts_counter %></h4>
+        </div>
+    </div>
+  </div>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<div id="posts" class= "container userBG">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p class="ebdShowPost">
+      <%= link_to "Show this post", user_post_path(@user, post) %>
+      <h4 class="text-light py-3">Comments</h4>
+      <% post.recent_comments.each do |comment|%>
+        <div>
+            <span><%= post.author.name %>:</span>
+            <span><%= comment.text %></span>
+          </div>
+      <% end %>
+    </p>
+    <hr>
+  <% end %>
+</div>

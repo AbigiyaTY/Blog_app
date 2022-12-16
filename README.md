@@ -112,7 +112,7 @@ Clone this repository to your desired folder:
 
 ```sh
   git clone https://github.com/AbigiyaTY/Blog_app.git
-  cd OOP_school_library
+  cd Blog_app
 ```
 
 ### Install
@@ -122,7 +122,7 @@ Install this project with **[package manager]**:
 ```sh
   cd Blog_app
   gem install
-
+  rails db:migrate
 ```
 
 ### Usage
