@@ -8,53 +8,21 @@ class CommentsController < ApplicationController
   def show; end
 
   def new
-    @comment = Comment.new
+    render :new, locals: { user: current_user }
   end
 
   def edit; end
 
   def create
-    @comment = Comment.new(comment_params)
-
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to comment_url(@comment), notice: 'Comment was successfully created.' }
-        format.json { render :show, status: :created, location: @comment }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
+    post_id = params[:post_id].to_i
+    post = Post.find(post_id)
+    comment = Comment.new(text: params[:user][:text], author: current_user, post:)
+    if comment.save
+      flash[:success] = 'Comment created successfully!'
+      redirect_to user_post_path(current_user, post)
+    else
+      flash.now[:error] = 'Something went wrong!'
+      render :new, locals: { user: current_user }, status: 302
     end
-  end
-
-  def update
-    respond_to do |format|
-      if @comment.update(comment_params)
-        format.html { redirect_to comment_url(@comment), notice: 'Comment was successfully updated.' }
-        format.json { render :show, status: :ok, location: @comment }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def destroy
-    @comment.destroy
-
-    respond_to do |format|
-      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
-
-  private
-
-  def set_comment
-    @comment = Comment.find(params[:id])
-  end
-
-  def comment_params
-    params.require(:comment).permit(:author_id, :post_id, :text)
   end
 end

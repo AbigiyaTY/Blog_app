@@ -1,6 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: green"><%= flash[:success] %></p>
 
 <%= render @post %>
+
+<div class = "container my-5 userBG">
+    <div class = "row">
+      <div class = "col-12 row down">
+        <p class="ebdShow col-3 py-3">>
+        <%= link_to "Add comment", new_user_post_comment_path(@post.author, @post) %>
+        </p>
+
+      <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/likes" ,class: "col-6" do |form|%>
+            <%= form.submit "like", class: "col-3"%>
+        <% end %>
+    </div>
+  </div>
+</div>
 
 <div class = "container my-5 py-5 userBG">
     <div class = "row">
@@ -15,3 +29,5 @@
     </div>  
   </div>
 </div>
+
+
