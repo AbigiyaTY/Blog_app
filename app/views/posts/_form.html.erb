@@ -1,22 +1,6 @@
-<%= form_with(model: post) do |form| %>
-  <% if post.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-        <% post.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <h1>Post</h1>
-
-  <div>
-    <%= form.label :author_id, style: "display: block" %>
-    <%= form.text_field :author_id %>
-  </div>
+<%= form_with model: user, url: user_posts_path ,method:  :post, scope: :user do |form| %>
+  
+  <h1>Create Post</h1>
 
   <div>
     <%= form.label :title, style: "display: block" %>
@@ -25,20 +9,10 @@
 
   <div>
     <%= form.label :text, style: "display: block" %>
-    <%= form.text_field :text %>
+    <%= form.text_area :text, size: "50x10", class: "my-3" %>
   </div>
 
   <div>
-    <%= form.label :comments_counter, style: "display: block" %>
-    <%= form.number_field :comments_counter %>
-  </div>
-
-  <div>
-    <%= form.label :likes_counter, style: "display: block" %>
-    <%= form.number_field :likes_counter %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit "New post"%>
   </div>
 <% end %>

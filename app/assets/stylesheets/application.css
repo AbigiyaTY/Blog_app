@@ -61,3 +61,18 @@
   text-decoration: underline;
   color: #ff79c6;
 }
+
+.likeCount input {
+  background: #000 !important;
+}
+
+.down form input {
+  margin-top: 15px;
+  color: #ff79c6;
+  padding: 5px 10px;
+}
+
+.likeCount {
+  margin-left: 25%;
+  padding-left: 40%;
+}
