@@ -5,13 +5,9 @@ class CommentsController < ApplicationController
     @comments = Comment.all
   end
 
-  def show; end
-
   def new
     render :new, locals: { user: current_user }
   end
-
-  def edit; end
 
   def create
     post_id = params[:post_id].to_i

@@ -2,15 +2,15 @@
 
 <%= render @post %>
 
-<div class = "container my-5 userBG">
+<div class = "container my-5">
     <div class = "row">
       <div class = "col-12 row down">
-        <p class="ebdShow col-3 py-3">>
+        <p class="ebdShow col-3 py-3 userBG">>
         <%= link_to "Add comment", new_user_post_comment_path(@post.author, @post) %>
         </p>
 
-      <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/likes" ,class: "col-6" do |form|%>
-            <%= form.submit "like", class: "col-3"%>
+      <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/likes" ,class: "col-6 likeCount" do |form|%>
+            <%= form.submit "like post", class: "col-12"%>
         <% end %>
     </div>
   </div>
