@@ -12,18 +12,18 @@ RSpec.describe 'User features', type: :system do
   end
 
     it 'displays the username of all other users.' do
-        visit user_path(subject)
+        visit users_path(subject)
         expect(page).to have_content('Lilly')
     end
 
     it 'displays the the profile picture for each user.' do
-        visit user_path(subject)
+        visit users_path(subject)
         page.has_content?('Screenshot Image')
         expect(page).to have_css('img')
     end
 
     it 'it display the number of posts each user has written.' do
-        visit user_path(subject)
+        visit users_path(subject)
         expect(page).to have_content('3')
     end
 
