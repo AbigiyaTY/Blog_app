@@ -16,7 +16,7 @@ RSpec.describe 'Post index page', type: :system do
 
         it 'display the number of posts each user has written.' do
             visit ('/users/1/posts')
-            expect(page).to have_content('3')
+            expect(page).to have_content('Number of posts: 3')
         end
 
         it 'display the title of the post' do
@@ -43,7 +43,5 @@ RSpec.describe 'Post index page', type: :system do
             visit ('/users/1/posts')
             expect(page).to have_content('Likes counter: 2')
         end
-
-
     end
 end
