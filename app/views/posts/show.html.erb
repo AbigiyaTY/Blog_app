@@ -20,7 +20,7 @@
     <div class = "row">
       <div class="col-12 row">
           <h5 class="text-light">Comments</h5>
-          <% @post.comments.each do |comment| %>
+          <% @post.comments.includes(:author).each do |comment| %>
               <div>
                 <span><%= @post.author.name %>:</span>
               <span><%= comment.text %></span>

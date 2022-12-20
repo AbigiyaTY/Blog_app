@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @user = User.find_by(id: params[:user_id])
-    @posts = @user.posts
+    @posts = @user.posts.includes(:comments)
     @posts = Post.all
     @comments = @user.comments
   end
