@@ -11,6 +11,9 @@ RSpec.describe 'User features', type: :system do
     )
   end
 
+
+  describe 'User Index page', js: true do
+
     it 'displays the username of all other users.' do
         visit users_path(subject)
         expect(page).to have_content('Lilly')
@@ -22,13 +25,14 @@ RSpec.describe 'User features', type: :system do
         expect(page).to have_css('img')
     end
 
-    it 'it display the number of posts each user has written.' do
+    it 'display the user bio' do
         visit users_path(subject)
-        expect(page).to have_content('3')
+        page.has_content?(@user.bio.to_s)
     end
 
-    # it 'When I click on a user, I am redirected to that user show page.' do
-    #     visit users_path(subject)
-    #     expect(page).to have_current_path('/users/1')
-    # end
+    it 'When I click on a user, I am redirected to that user show page.' do
+        visit users_path(@user)
+        expect(current_path).to eq (users_path(@user)) 
+    end
+  end
 end

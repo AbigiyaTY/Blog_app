@@ -41,9 +41,3 @@ RSpec.describe 'User Show Page', type: :system do
     end
 end
 
-
-
-
-
-
-
