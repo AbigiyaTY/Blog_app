@@ -26,7 +26,7 @@
     <p class="ebdShowPost">
       <%= link_to "Show this post", user_post_path(@user, post) %>
       <h4 class="text-light py-3">Comments</h4>
-      <% post.recent_comments.each do |comment|%>
+      <% post.recent_comments.includes(:author).each do |comment| %>
         <div>
             <span><%= post.author.name %>:</span>
             <span><%= comment.text %></span>

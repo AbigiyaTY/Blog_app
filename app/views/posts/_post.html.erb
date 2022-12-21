@@ -4,12 +4,12 @@
   <div class="row">
     <p class="blueTitle">
       <strong>Post #</strong>
-      <%= post.id %> 
+      <%= link_to post.id , user_post_path(post.author, post) %> 
     </p>
 
     <p class="blueTitle">
       <strong>Title:</strong>
-      <%= post.title %>
+      <%= link_to post.title, user_post_path(post.author, post) %> 
     </p>
 
     <p class="blueTitle">
