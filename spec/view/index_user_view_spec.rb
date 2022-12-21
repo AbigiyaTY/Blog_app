@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'User features', type: :system do
-
-    subject do
+  subject do
     @user = User.create(
       name: 'Lilly',
       posts_counter: 3,
@@ -11,28 +10,26 @@ RSpec.describe 'User features', type: :system do
     )
   end
 
-
   describe 'User Index page', js: true do
-
     it 'displays the username of all other users.' do
-        visit users_path(subject)
-        expect(page).to have_content('Lilly')
+      visit users_path(subject)
+      expect(page).to have_content('Lilly')
     end
 
     it 'displays the the profile picture for each user.' do
-        visit users_path(subject)
-        page.has_content?('Screenshot Image')
-        expect(page).to have_css('img')
+      visit users_path(subject)
+      page.has_content?('Screenshot Image')
+      expect(page).to have_css('img')
     end
 
     it 'display the user bio' do
-        visit users_path(subject)
-        page.has_content?(@user.bio.to_s)
+      visit users_path(subject)
+      page.has_content?(@user.bio.to_s)
     end
 
     it 'When I click on a user, I am redirected to that user show page.' do
-        visit users_path(@user)
-        expect(current_path).to eq (users_path(@user)) 
+      visit users_path(@user)
+      expect(current_path).to eq(users_path(@user))
     end
   end
 end
