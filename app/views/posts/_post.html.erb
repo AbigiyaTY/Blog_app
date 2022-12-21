@@ -9,7 +9,7 @@
 
     <p class="blueTitle">
       <strong>Title:</strong>
-      <%= post.title %>
+      <%= link_to post.title, user_post_path(post.author, post) %> 
     </p>
 
     <p class="blueTitle">
