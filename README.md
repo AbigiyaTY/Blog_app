@@ -23,7 +23,7 @@
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
-  - [Author](#author)
+  - [Authors](#authors)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -37,12 +37,13 @@
 2. Use Ruby Gems as a software packages system.
 3. Understand what ORM is.
 4. Use database migration files to maintain database schema.
-5. Write tests for models, controllers.
+5. Write tests for models, controllers, system.
 5. Set up associations between models.
 6. Write SQL queries with Active Record
 7. Use preprocessed HTML file with embedded Ruby code.
 8. Use layouts and templates for shared content.
-
+9. Build a web app that requires the user to log in.
+10. Use devise gem for authentication.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -135,13 +136,19 @@ To run the project, execute the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Author
+## Authors
 
 👤 **Abigiya Tadesse**
 
 * GitHub: [@githubhandle](https://github.com/AbigiyaTY)
 * Twitter: [@twitterhandle](https://twitter.com/AbigiyaTY)
 * LinkedIn: [@LinkedIn](https://www.linkedin.com/in/AbigiyaTY)
+
+👤**Elie Harfouche**
+
+- GitHub: [@X-Elie-X](https://github.com/X-Elie-X)
+- LinkedIn: [Elie Harfouche](https://www.linkedin.com/in/elie-m-harfouche/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
