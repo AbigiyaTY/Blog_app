@@ -2,101 +2,128 @@
   margin: 0;
   padding: 0;
 }
+
 .userImage {
   width: 300px;
   height: 300px;
 }
+
 .userBG,
 .ebdShow {
   background-color: #383a59;
   color: #8be9fd;
 }
+
 .bioText,
 .ebd a,
 .blueTitle,
 .ebdShow a {
   color: #fff;
 }
+
 .blueTitle strong {
   color: #8be9fd;
 }
+
 .last {
   padding-bottom: 10px;
 }
+
 .buttonColor {
   color: #ff79c6;
 }
+
 .ebd a,
 .buttonColor,
 .ebdShow a {
   text-decoration: none;
 }
+
 .button_to {
   width: 33%;
 }
+
 .ebdShowPost {
   padding-bottom: 15px;
 }
+
 .ebdShowPost a {
   color: #ff79c6;
 }
+
 .ebd a:hover,
 .buttonColor:hover {
   color: #ff79c6;
   text-decoration: underline;
 }
+
 .ebdShow a:hover {
   text-decoration: underline;
   color: #ff79c6;
 }
+
 .likeCount input {
   background: #000 !important;
 }
-.down form input {
-  margin-top: 15px;
-  color: #ff79c6;
-  padding: 5px 10px;
-}
-.likeCount {
-  margin-left: 25%;
-  padding-left: 40%;
-}
-#singup {
-  margin-top: 5%;
-}
-.SignBlog {
-  margin-left: 3%;
-}
+
 .submit input {
   color: #ff79c6;
   background: #000;
   margin-top: 1%;
 }
+
+.down form input {
+  margin-top: 15px;
+  color: #ff79c6;
+  padding: 5px 10px;
+}
+
+.likeCount {
+  margin-left: 25%;
+  padding-left: 40%;
+}
+
+#singup {
+  margin-top: 5%;
+}
+
+.SignBlog {
+  margin-left: 3%;
+}
+
 .submit input:hover {
   color: #000;
   background: #ff79c6;
 }
+
 .signUP {
   margin-left: 45%;
 }
+
 .LogIn {
   margin-left: 49%;
 }
+
 .pwNew {
   margin-left: 26.5%;
 }
+
 .bioFlabel {
   margin-left: 2%;
 }
+
 input#user_name {
   margin-left: 1%;
 }
+
 .newPW {
   margin-left: 33%;
 }
+
 input#user_email {
-  margin-left: 1%;
+  margin-left: 1.5%;
 }
+
 input#user_bio {
-  margin-left: 0.5%;
+  margin-left: 1%;
 }
