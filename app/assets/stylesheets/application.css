@@ -66,6 +66,12 @@
   background: #000 !important;
 }
 
+.submit input {
+  color: #ff79c6;
+  background: #000;
+  margin-top: 1%;
+}
+
 .down form input {
   margin-top: 15px;
   color: #ff79c6;
@@ -75,4 +81,49 @@
 .likeCount {
   margin-left: 25%;
   padding-left: 40%;
+}
+
+#singup {
+  margin-top: 5%;
+}
+
+.SignBlog {
+  margin-left: 3%;
+}
+
+.submit input:hover {
+  color: #000;
+  background: #ff79c6;
+}
+
+.signUP {
+  margin-left: 45%;
+}
+
+.LogIn {
+  margin-left: 49%;
+}
+
+.pwNew {
+  margin-left: 26.5%;
+}
+
+.bioFlabel {
+  margin-left: 2%;
+}
+
+input#user_name {
+  margin-left: 1%;
+}
+
+.newPW {
+  margin-left: 33%;
+}
+
+input#user_email {
+  margin-left: 1.5%;
+}
+
+input#user_bio {
+  margin-left: 1%;
 }

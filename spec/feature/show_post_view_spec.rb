@@ -19,7 +19,7 @@ RSpec.describe 'Post index page', type: :system do
 
     it 'I can see how many likes a post has.' do
       visit('/users/1/posts/1')
-      expect(page).to have_content('Likes counter: 2')
+      expect(page).to have_content('Likes counter: 1')
     end
 
     it 'I can see some of the post body' do
