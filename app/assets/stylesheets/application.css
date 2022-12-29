@@ -66,6 +66,7 @@
   background: #000 !important;
 }
 
+button.deletPost,
 .submit input {
   color: #ff79c6;
   background: #000;
@@ -73,14 +74,12 @@
 }
 
 .down form input {
-  margin-top: 15px;
   color: #ff79c6;
-  padding: 5px 10px;
 }
 
 .likeCount {
-  margin-left: 25%;
-  padding-left: 40%;
+  margin-left: 5%;
+  padding-left: 5%;
 }
 
 #singup {

@@ -12,6 +12,10 @@
         <li class="nav-item">
           <%= button_to 'logout', destroy_user_session_path, data: {turbo: false}, method: :delete, class: "btn btn-danger" %>
         </li>
+        <li class="nav-item text-secondary mx-5">
+          Logged in as 
+          <strong><%= current_user.email %></strong>
+        </li>
       </ul>
     </div>
   </div>
