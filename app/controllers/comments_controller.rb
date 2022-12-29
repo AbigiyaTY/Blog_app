@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: %i[show edit update destroy]
+  before_action :authenticate_user!, only: %i[show edit update destroy]
+  load_and_authorize_resource
 
   def index
     @comments = Comment.all
@@ -20,5 +21,13 @@ class CommentsController < ApplicationController
       flash.now[:error] = 'Something went wrong!'
       render :new, locals: { user: current_user }, status: 302
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:post_id])
+    @comment = Comment.find(params[:id])
+    @post.decrement!(:comments_counter)
+    @comment.destroy
+    redirect_to user_post_path(user_id: @post.author_id, post_id: @post.id), notice: 'Deleted Comment'
   end
 end
