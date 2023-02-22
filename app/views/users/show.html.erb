@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @user %>
+
+<div class = "container my-5 userBG">
+    <div class = "row">
+      <div class="col-12 row">
+          <h4 class = "col-12 py-2">Bio</h4>
+          <p class = "col-12 py-2 bioText">
+            <%= @user.bio %>
+          </p>
+      </div>
+    </div>
+</div>
+
+<div class = "container my-5 userBG">
+  <div class="col-12 row py-3">
+    <% @user.recent_posts.each do |post|%>
+              <%= render "posts/post", post: post %>
+          <% end %>
+    <%= link_to user_posts_path(@user) do %>
+            <button class="col-2 my-3 see-all-posts">See all posts</button>
+        <% end %>
+  </div>
+</div>
+
+<div class = "container my-5 userBG">
+  <div class="col-12 row my-3 py-4">
+    <p class="show-user ebd col-1">
+      <%= link_to "up", @user %>
+    </p>
+    <p class="col-2 ebd"><%= link_to "Edit this user", edit_user_path(@user) %></p>
+    <%= button_to "Destroy this user", @user, method: :delete, class: "col-6 buttonColor py-1" %>
+  </div>
+</div>

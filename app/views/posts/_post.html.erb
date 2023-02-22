@@ -1,0 +1,31 @@
+<div id="<%= dom_id post %>">
+
+<div id="posts" class= "container userBG py-3">
+  <div class="row">
+    <p class="blueTitle">
+      <strong>Post #</strong>
+      <%= link_to post.id , user_post_path(post.author, post) %> 
+    </p>
+
+    <p class="blueTitle">
+      <strong>Title:</strong>
+      <%= link_to post.title, user_post_path(post.author, post) %> 
+    </p>
+
+    <p class="blueTitle">
+      <strong>Text:</strong>
+      <%= post.text %>
+    </p>
+
+    <p class="blueTitle">
+      <strong>Comments counter:</strong>
+      <%= post.comments_counter %>
+    </p>
+
+    <p class="blueTitle last">
+      <strong>Likes counter:</strong>
+      <%= post.likes_counter %>
+    </p>
+
+  </div>
+</div>

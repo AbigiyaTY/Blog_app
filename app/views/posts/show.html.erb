@@ -1,0 +1,41 @@
+<p style="color: green"><%= flash[:success] %></p>
+
+<%= render @post %>
+
+<div class = "container my-5">
+    <div class = "row">
+      <div class = "col-12 row down">
+        <p class="ebdShow col-3 py-3 userBG">>
+        <%= link_to "Add comment", new_user_post_comment_path(@post.author, @post) %>
+        </p>
+      <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/likes" ,class: "col-4 likeCount" do |form|%>
+            <%= form.submit "like post", class: "col-3 my-1 mx-2 py-3"%>
+        <% end %>
+      <% if can? :destroy, @post %>
+        <%= button_to "Delete Post", user_post_path(@post.author.id, @post.id), method: :delete, class: "deletPost col-4 my-2 py-3" %>
+        <% end %>
+
+    </div>
+  </div>
+</div>
+
+<div class = "container my-5 py-5 userBG">
+    <div class = "row">
+      <div class="col-6 row">
+          <h5 class="text-light col-12">Comments</h5>
+          <% @post.comments.includes(:author).each do |comment| %>
+              <div>
+                <span><%= @post.author.name %>:</span>
+              <span><%= comment.text %></span>
+            </div>
+      </div>  
+      <div class="col-6">
+        <% if can? :destroy, comment %>
+      <%= button_to "Delete Comment", user_post_comment_path(user_id: comment.author.id, post_id: comment.post.id, id: comment.id), method: :delete, class: "deletPost my-2 py-3 px-4" %>
+      <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+

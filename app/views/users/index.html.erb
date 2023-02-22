@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="users" class = "container my-5">
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p class="show-user ebdShow col-3 py-3 px-2">
+  <%= link_to "Show this user", user %>
+</p>
+  <% end %>
+</div>
+
