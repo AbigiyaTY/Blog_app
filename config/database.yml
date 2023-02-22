@@ -15,6 +15,4 @@ test:
 
 production:
   <<: *default
-  database: blog_app
-  password: <%= ENV["BUDGET_APP_DATABASE_PASSWORD"] %>
   url: <%= ENV["DATABASE_URL"]%>
